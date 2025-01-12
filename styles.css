@@ -1,0 +1,426 @@
+/* General Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Ensure main content goes vertically */
+}
+
+/* Header Section */
+header {
+    background-color: #750000;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: normal;
+    width: 96%;
+    position: fixed; /* To keep the header fixed on top */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    right: 0;
+}
+/* Adjust the navigation to align to the left */
+header nav {
+    display: flex;
+    justify-content: flex-start; /* Align links to the left */
+    margin-left: 100px; /* Remove any margin that shifts the nav to the right */
+    padding-left: 0;
+}
+
+    header .logo img {
+        height: 70px;
+    }
+    header .search img{
+        height:70px;
+        position:absolute;
+        right:1rem;
+        top:0.75rem;
+        cursor:pointer;
+    }
+
+    header nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+        header nav ul li {
+            margin-left: 20px;
+        }
+
+            header nav ul li a {
+                font-weight: bold;
+                color: white;
+                text-decoration: none; /* No underline by default */
+            }
+
+                header nav ul li a:hover {
+                    text-decoration: underline; /* Underline the link on hover */
+                    text-decoration-color:#ff0000;
+                    text-decoration-thickness:4px;
+                }
+
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    text-align: center;
+}
+
+    .hero-section img {
+        width: 100%;
+        height: auto;
+    }
+
+/* Search Section */
+.search-section {
+    position: fixed;
+    left: 0;
+    top: 200px;
+    bottom: 0;
+    width: 375px;
+    background: #eaeaea;
+    padding: 1.5rem; /* Reduced padding */
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+    .search-section h2 {
+        font-size: 1.2rem;
+        margin-top:-5rem;
+        margin-bottom: 6rem;/*reduced margin*/
+        font-weight: bold;
+    }
+
+.search-box {
+    position: relative;
+    margin-top:-5rem;
+    margin-bottom: 1rem; /* Reduced margin */
+}
+
+    .search-box input {
+        width: 80%;
+        padding: 1rem 1rem 1rem 3rem;
+        border: none;
+        background: white;
+        border-radius: 4px;
+        font-size: 1rem;
+    }
+
+    .search-box .search-icon {
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #ff3b30;
+        width: 20px;
+        height: 20px;
+    }
+
+/* MIT Info */
+.mit-info {
+    margin-top: auto;
+    padding-top: 0.5rem; /* Reduced padding */
+    border-top: 1px solid #eee;
+}
+
+.mit-name {
+    font-weight: 500;
+    margin-bottom: 0.25rem; /* Reduced margin */
+}
+
+.mit-address {
+    color: black;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.75rem; /* Reduced margin */
+}
+
+.mit-links {
+    display: flex;
+    color:black;
+    flex-wrap: wrap;
+    gap: 0.5rem; /* Reduced gap */
+    margin-bottom: 0.75rem; /* Reduced margin */
+}
+
+    .mit-links a {
+        color: black;
+        text-decoration: underline;
+        text-decoration-color:#ff0000;
+        font-size: 0.875rem;
+    }
+
+        .mit-links a:hover {
+            color: #750000;
+        }
+
+.quick-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem; /* Reduced padding */
+    border: 1px solid #ddd;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 0.25rem; /* Reduced margin */
+    transition: border-color 0.3s;
+    width: 100%;
+}
+
+    .quick-link:hover {
+        border-color: #750000;
+    }
+
+    .quick-link .arrow-up {
+        margin-left: auto;
+        width: 12px;
+        height: 12px;
+    }
+
+/* Adjust main content */
+body {
+    padding-left: 467px;
+    padding-right:40px;
+    padding-top: 90px; /* Optional: Adjust to avoid header overlap */
+    background: #eaeaea;
+
+}
+
+main,
+.site-nav,
+.site-footer,
+.alert {
+    width: calc(100vw - 367px);
+    margin-left: auto;
+}
+.upl strong {
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: #ff0000;
+    text-decoration-thickness: 2px;
+    padding: 40px;
+    line-height: 3;
+}
+.upl{
+    border: 2px solid #ddd;
+    background-color: #b2b2b2;
+    width: 120%;
+    margin-left:-40px;
+}
+.info {
+    text-align: center;
+    font-weight: bold;
+    padding:60px;
+    font-size:25px;
+}
+/* Spotlight Section */
+.spotlight {
+    margin-top: 20px;
+    text-align:center;
+}
+
+.spotlight-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px;
+}
+
+.spotlight-item {
+    display: flex;
+    flex-direction: column;
+}
+
+    .spotlight-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        cursor:pointer;
+    }
+
+    .spotlight-item div {
+        text-align: left;
+        margin-top: 10px;
+    }
+    .spotlight-item:hover{
+        text-decoration:underline;
+        cursor:pointer;
+    }
+
+/* News Section */
+.news {
+    margin-top: 20px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px;
+}
+
+.news-item {
+    display: flex;
+    flex-direction: column;
+}
+
+    .news-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        cursor: pointer;
+    }
+
+    .news-item div {
+        text-align: left;
+        margin-top: 10px;
+    }
+.news-item:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+    /*research section*/
+.research {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px;
+}
+
+.research-item {
+    display: flex;
+    flex-direction: column;
+}
+
+    .research-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        cursor: pointer;
+    }
+
+    .research-item div {
+        text-align: left;
+        margin-top: 10px;
+    }
+.research-item:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 1200px) {
+    .search-section {
+        display: none;
+    }
+
+    body {
+        padding-left: 0;
+    }
+
+    main,
+    .site-nav,
+    .site-footer,
+    .alert {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    /* Adjust Grid for smaller screens */
+    .spotlight-grid,
+    .news-grid,
+    research-grid{
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+}
+/* Footer Styles */
+.footer {
+    background-color: #750000;
+    display:flex;
+    align-items:center;
+    color: white;
+    padding: 20px;
+    text-align: left;
+    margin-top: 40px;
+}
+
+    .footer p {
+        font-size: 1rem;
+        margin-right:10px;
+        margin-bottom: 10px;
+    }
+
+.subscribe-box {
+    display: inline-block;
+    background-color: #ff3b30;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .subscribe-box:hover {
+        background-color: #8e0000;
+    }
+/* Top Resources Section */
+.top-resources p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight:bold
+}
+
+.top-resources .links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns of equal width */
+    gap: 20px; /* Space between the items */
+}
+
+.top-resources a {
+    color: black;
+    text-decoration: none;
+    font-size:1rem;
+}
+
+    .top-resources a:hover {
+        color: #8e0000;
+    }
+
+/* Featured Topic Section */
+.featured-topic p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.featured-topic a {
+    color: #750000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    .featured-topic a:hover {
+        color: #8e0000;
+    }
+.searchm{
+    position:absolute;
+    left:1.85rem;
+    top:-0.8rem;
+}
